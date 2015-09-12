@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        zoomCamera();
 		if (Input.GetKeyDown ("escape")) {
 			Screen.lockCursor = false;
 			Cursor.visible = true;
@@ -59,5 +60,14 @@ public class Movement : MonoBehaviour {
 			this.transform.RotateAround(this.transform.position, this.transform.right,-mouseSpeed * Time.deltaTime * Input.GetAxis("Mouse Y"));
 		}
 	}
+
+    float smooth = .05f;
+    float cameraZ = 5;
+    void zoomCamera () {
+        Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.Lerp(
+                Camera.main.transform.position.z, cameraZ, smooth));
+        //Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 150, smooth);
+        print(Camera.main.transform.position);
+    }
 }
 
