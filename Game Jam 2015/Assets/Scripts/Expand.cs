@@ -11,6 +11,8 @@ public class Expand : MonoBehaviour {
 	void Update () {
 		if(transform.localScale.x < 9.8)
 		{
+			if(transform.localScale.x > 1.0)
+			{ IntroUI.SetActive(true); }
 			this.transform.localScale *= 1 + (expandRate * Time.deltaTime);
 		}else{
 			mainElements.SetActive(true);

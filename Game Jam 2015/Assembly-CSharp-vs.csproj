@@ -46,14 +46,17 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Expand.cs" />
-     <Compile Include="Assets\ResizeCamera.cs" />
      <Compile Include="Assets\Scripts\AI.cs" />
+     <Compile Include="Assets\Scripts\Death.cs" />
+     <Compile Include="Assets\Scripts\Expand.cs" />
      <Compile Include="Assets\Scripts\Grow.cs" />
      <Compile Include="Assets\Scripts\MainTexture.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\ResizeCamera.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Start_Game.cs" />
      <Compile Include="Assets\Scripts\Textures.cs" />
+     <None Include="Assets\Inside.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
