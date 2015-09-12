@@ -2,7 +2,8 @@
 using System.Collections;
 
 public class AI : MonoBehaviour {
-	float moveSpeed = 2.0f;
+	float moveSpeed = 1.5f;
+
 	public bool disable = false;
 	// Update is called once per frame
 	void Update () {

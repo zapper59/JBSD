@@ -34,10 +34,10 @@ public class Movement : MonoBehaviour {
 		}
 		
 		if (Input.GetKey (KeyCode.Space) || Input.GetKey (KeyCode.LeftControl) || Input.GetKey (KeyCode.RightControl)) {
-			this.transform.Translate(new Vector3(0,-1,0) *  Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(0,-1,0) *  Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.LeftShift) || Input.GetKey (KeyCode.RightShift)) {
-			this.transform.Translate(new Vector3(0,1,0) *  Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(0,1,0) *  Time.deltaTime);
 		}
 		
 		//The old control method
