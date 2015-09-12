@@ -46,9 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Grow.cs" />
+     <Compile Include="Assets\Scripts\AI.cs" />
+     <Compile Include="Assets\Scripts\Grow.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
-     <Compile Include="Assets\Spawn.cs" />
+     <Compile Include="Assets\Scripts\Spawn.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

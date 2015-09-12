@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour {
 		}
 	}
 
-    float smooth = .05f;
+   /* float smooth = .05f;
     float cameraZ = 5;
     void zoomCamera () {
         //Camera.main.transform.localPosition = new Vector3(0, 0, Mathf.SmoothDamp(
@@ -69,6 +69,6 @@ public class Movement : MonoBehaviour {
         //Camera.main.fieldOfView = Mathf.Lerp(Camera.main.fieldOfView, 150, smooth);
         print(Camera.main.transform.localPosition);
 
-    }
+    }*/
 }
 
