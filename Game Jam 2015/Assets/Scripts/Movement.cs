@@ -3,21 +3,21 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 	
-	
+	public GameObject planet;
+	public AudioClip boostSound;
+	bool boosted = false;
+
 	float mouseSpeed = 100f;
 	float moveSpeed = 2.0f;
 	
-	void Start() {
-		Screen.lockCursor = true;
-		Cursor.visible = false;
-	}
+
 	
 	// Update is called once per frame
 	void Update () {
         //zoomCamera();
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			Screen.lockCursor = false;
-			Cursor.visible = true;
+			//Cursor.visible = true;
 		}
 		float moveAmount = ((moveSpeed / this.transform.lossyScale.x) + moveSpeed)/2.0f;
 		/*if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
@@ -58,6 +58,19 @@ public class Movement : MonoBehaviour {
 			this.transform.RotateAround(this.transform.position, this.transform.right,mouseSpeed * Time.deltaTime * Input.GetAxis("Mouse Y"));
 		}else if (Mathf.Abs(Input.GetAxis ("VerticalY")) > .1f) {
 			this.transform.RotateAround(this.transform.position, this.transform.right,mouseSpeed * Time.deltaTime * Input.GetAxis("VerticalY"));
+		}
+
+		if(Input.GetAxis("Fire1") > 0)
+		{
+			if(!boosted && planet.transform.localScale.x > 1)
+			{
+				this.transform.Translate(moveAmount * new Vector3(0,0,1) * .5f);
+				planet.transform.localScale = new Vector3(planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f);
+				GetComponent<AudioSource>().PlayOneShot(boostSound);
+				boosted = true;
+			}
+		}else{
+			boosted = false;
 		}
 	}
 }
