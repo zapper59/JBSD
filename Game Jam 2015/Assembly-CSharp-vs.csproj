@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AI.cs" />
      <Compile Include="Assets\Scripts\Grow.cs" />
+     <Compile Include="Assets\Scripts\MainTexture.cs" />
      <Compile Include="Assets\Scripts\Movement.cs" />
      <Compile Include="Assets\Scripts\Spawn.cs" />
      <Compile Include="Assets\Scripts\Textures.cs" />
