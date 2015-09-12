@@ -19,7 +19,7 @@ public class Death : MonoBehaviour {
 			{
 				if(startTime == -1)
 					startTime = Time.time;
-				if(Time.time - startTime > 5)
+				if(Time.time - startTime > 3)
 				{
 					exit = Instantiate(exitPrefab, this.transform.position, Quaternion.identity) as GameObject;
 					cameraObject.GetComponent<Camera>().clearFlags = CameraClearFlags.Color;
@@ -36,7 +36,7 @@ public class Death : MonoBehaviour {
 					}
 				}
 			}else{
-				exit.transform.localScale = new Vector3(exit.transform.localScale.x/(1+Time.deltaTime),exit.transform.localScale.x/(1+Time.deltaTime),exit.transform.localScale.x/(1+Time.deltaTime));
+				exit.transform.localScale = new Vector3(exit.transform.localScale.x/(1+(Time.deltaTime*2)),exit.transform.localScale.x/(1+(Time.deltaTime*2)),exit.transform.localScale.x/(1+(Time.deltaTime*2)));
 				if(exit.transform.localScale.x < .001f)
 				{
 					Instantiate(Resources.Load("Everything"), new Vector3(0,0,0), Quaternion.identity);

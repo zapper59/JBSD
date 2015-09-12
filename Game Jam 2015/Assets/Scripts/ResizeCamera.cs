@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ResizeCamera : MonoBehaviour {
 	public GameObject mainCamera;
-	int nextLevelUp = 2;
+	double nextLevelUp = 2;
 	
 	// Update is called once per frame
 	void Update () {

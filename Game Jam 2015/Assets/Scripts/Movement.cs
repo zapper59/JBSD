@@ -17,7 +17,7 @@ public class Movement : MonoBehaviour {
         //zoomCamera();
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			Screen.lockCursor = false;
-			//Cursor.visible = true;
+			Cursor.visible = true;
 		}
 		float moveAmount = ((moveSpeed / this.transform.lossyScale.x) + moveSpeed)/2.0f;
 		/*if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
@@ -62,12 +62,18 @@ public class Movement : MonoBehaviour {
 
 		if(Input.GetAxis("Fire1") > 0)
 		{
-			if(!boosted && planet.transform.localScale.x > 1)
+			if(Cursor.visible)
 			{
-				this.transform.Translate(moveAmount * new Vector3(0,0,1) * .5f);
-				planet.transform.localScale = new Vector3(planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f);
-				GetComponent<AudioSource>().PlayOneShot(boostSound);
-				boosted = true;
+				Cursor.visible = false;
+			}
+			else{
+				if(!boosted && planet.transform.localScale.x > 1)
+				{
+					this.transform.Translate(moveAmount * new Vector3(0,0,1) * .5f);
+					planet.transform.localScale = new Vector3(planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f);
+					GetComponent<AudioSource>().PlayOneShot(boostSound);
+					boosted = true;
+				}
 			}
 		}else{
 			boosted = false;
