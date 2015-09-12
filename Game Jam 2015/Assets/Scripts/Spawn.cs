@@ -13,7 +13,9 @@ public class Spawn : MonoBehaviour {
 	float smaller = .2f;
 	float same = .2f;
 	float larger = .15f;
-	float hugeStand = .05f;
+	float hugeStand = .03f;
+	float veryhugeStand = .015f;
+	float veryveryhugeStand = .005f;
 
 	void Start()
 	{
@@ -37,6 +39,8 @@ public class Spawn : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		spawnDistance = 25 * this.transform.lossyScale.x;
+		destroyDistance = spawnDistance * 2;
 		for(int i = 0; i < spheres.Length; i++) {
 			if(spheres[i] == null)
 			{
@@ -95,6 +99,10 @@ public class Spawn : MonoBehaviour {
 			size = 1.3f * this.transform.lossyScale.x;
 		}else if(rand < smallStand + smaller + same + larger + hugeStand){
 			size = 5;
+		}else if(rand < smallStand + smaller + same + larger + hugeStand + veryhugeStand){
+			size = 10;
+		}else if(rand < smallStand + smaller + same + larger + hugeStand + veryhugeStand + veryveryhugeStand){
+			size = 15;
 		}
 		size *= (float)(Random.value+.5);
 		

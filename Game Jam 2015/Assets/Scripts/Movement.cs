@@ -78,6 +78,12 @@ public class Movement : MonoBehaviour {
 		}else{
 			boosted = false;
 		}
+
+		if(Input.GetAxis("end") > 0)
+		{
+			this.transform.position = new Vector3(1000,1000,1000);
+			planet.transform.localScale = new Vector3(36,36,36);
+		}
 	}
 }
 
