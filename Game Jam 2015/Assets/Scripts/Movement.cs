@@ -5,6 +5,7 @@ public class Movement : MonoBehaviour {
 	
 	
 	float mouseSpeed = 100f;
+	float moveSpeed = 2.0f;
 	
 	void Start() {
 		Screen.lockCursor = true;
@@ -18,18 +19,18 @@ public class Movement : MonoBehaviour {
 			Screen.lockCursor = false;
 			Cursor.visible = true;
 		}
-		
+		float moveAmount = ((moveSpeed / this.transform.lossyScale.x) + moveSpeed)/2.0f;
 		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.UpArrow)) {
-			this.transform.Translate(new Vector3(0,0,1) * Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(0,0,1) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.A)|| Input.GetKey (KeyCode.LeftArrow)) {
-			this.transform.Translate(new Vector3(-1,0,0) * Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(-1,0,0) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.S)|| Input.GetKey (KeyCode.DownArrow)) {
-			this.transform.Translate(new Vector3(0,0,-1) * Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(0,0,-1) * Time.deltaTime);
 		}
 		if (Input.GetKey (KeyCode.D)|| Input.GetKey (KeyCode.RightArrow)) {
-			this.transform.Translate(new Vector3(1,0,0) * Time.deltaTime);
+			this.transform.Translate(moveAmount * new Vector3(1,0,0) * Time.deltaTime);
 		}
 		
 		if (Input.GetKey (KeyCode.Space) || Input.GetKey (KeyCode.LeftControl) || Input.GetKey (KeyCode.RightControl)) {

@@ -4,15 +4,15 @@ using System.Collections;
 public class Spawn : MonoBehaviour {
 
 	GameObject[] spheres = new GameObject[100];
-	float spawnDistance = 50f;
-	float destroyDistance = 100f;
+	float spawnDistance = 25f;
+	float destroyDistance = 50f;
 	public GameObject prefab;
 	
-	float smallStand = .3f;
-	float smaller = .3f;
-	float same = .2f;
-	float larger = .15f;
-	float hugeStand = .5f;
+	float smallStand = .9f;
+	float smaller = .04f;
+	float same = .03f;
+	float larger = .02f;
+	float hugeStand = .01f;
 
 	void Start()
 	{
@@ -48,10 +48,10 @@ public class Spawn : MonoBehaviour {
 		float size = 1;
 
 		float rand = Random.value;
-		Debug.Log(smallStand + smaller + same + larger + hugeStand);
 		if(rand < smallStand)
 		{
-			size = .8f;
+			size = .5f;
+			newSphere.GetComponent<AI>().disable = true;
 			Debug.Log("1");
 		}else if(rand < smallStand + smaller){
 			size = .7f * this.transform.lossyScale.x;
@@ -69,6 +69,8 @@ public class Spawn : MonoBehaviour {
 		size *= (float)(Random.value+.5);
 
 		newSphere.transform.localScale = new Vector3(size,size,size);
+
+		newSphere.GetComponent<MeshRenderer>().material.mainTexture = this.GetComponent<Textures>().getRandomTexture();
 
 		return newSphere;
 	}
