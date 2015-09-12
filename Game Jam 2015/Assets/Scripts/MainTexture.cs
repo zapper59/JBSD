@@ -4,7 +4,7 @@ using System.Collections;
 public class MainTexture : MonoBehaviour {
 	public Texture[] textures;
 	MeshRenderer rend = null;
-	float scrollSpeed = .01f;
+	float scrollSpeed = 5f;
 	// Use this for initialization
 	void Start () {
 		int num = Random.Range(0,textures.Length);
@@ -13,8 +13,8 @@ public class MainTexture : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		float offset = Time.time * scrollSpeed;
-		rend.material.SetTextureOffset("_MainTex", new Vector2(offset, 0));
+	void Update () {
+		float offset = Time.deltaTime* scrollSpeed;
+		this.transform.RotateAround(this.transform.position,this.transform.up,offset);
 	}
 }

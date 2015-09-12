@@ -2,7 +2,6 @@
 using System.Collections;
 
 public class Grow : MonoBehaviour {
-
 	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player") {
 			if(this.transform.lossyScale.x * .9f > other.transform.lossyScale.x)

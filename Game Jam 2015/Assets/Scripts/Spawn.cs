@@ -22,12 +22,14 @@ public class Spawn : MonoBehaviour {
 			if(spheres[i] == null)
 			{
 				spheres[i] = spawnNew();
+				spheres[i].GetComponent<Rigidbody>().velocity = new Vector3(0,0,-20);
 			}
 		}
 		for(int i = 0; i < movingSpheres.Length; i++) {
 			if(spheres[i] == null)
 			{
 				spheres[i] = spawnNewMoving();
+				spheres[i].GetComponent<Rigidbody>().velocity = new Vector3(0,0,-20);
 			}
 		}
 		spawnDistance *= 2;

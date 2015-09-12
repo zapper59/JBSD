@@ -10,7 +10,7 @@ public class AI : MonoBehaviour {
 		if(!disable)
 		{
 		GameObject[] obs = GameObject.FindGameObjectsWithTag("Player");
-		double minDist = 30;
+		double minDist = 1000;
 		GameObject close = null;
 		foreach (GameObject g in obs){
 			if(Vector3.Distance(this.transform.position,g.transform.position) < minDist && Vector3.Distance(this.transform.position,g.transform.position) > 0)
@@ -20,7 +20,7 @@ public class AI : MonoBehaviour {
 			}
 		}
 		if(close != null){
-			if(close.transform.lossyScale.x > this.transform.lossyScale.x *.9)
+			if(minDist < 20f && close.transform.lossyScale.x > this.transform.lossyScale.x *.9)
 			{
 				//run
 				float step = (((moveSpeed / this.transform.lossyScale.x) + moveSpeed)/2.0f) * -Time.deltaTime;
