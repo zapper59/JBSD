@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour {
 	
 	float mouseSpeed = 100f;
 	
-	void Strart() {
+	void Start() {
 		Screen.lockCursor = true;
 		Cursor.visible = false;
 	}

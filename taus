@@ -1,0 +1,35 @@
+[1mdiff --git a/Game Jam 2015/Game Jam 2015.CSharp.csproj b/Game Jam 2015/Game Jam 2015.CSharp.csproj[m
+[1mindex cbd1915..05e8ab8 100644[m
+[1m--- a/Game Jam 2015/Game Jam 2015.CSharp.csproj[m	
+[1m+++ b/Game Jam 2015/Game Jam 2015.CSharp.csproj[m	
+[36m@@ -51,30 +51,12 @@[m
+     <Reference Include="UnityEngine">[m
+       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>[m
+     </Reference>[m
+[31m-    <Reference Include="UnityEngine.Advertisements">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>[m
+[31m-    </Reference>[m
+     <Reference Include="UnityEngine.UI">[m
+       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>[m
+     </Reference>[m
+     <Reference Include="UnityEngine.Networking">[m
+       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>[m
+     </Reference>[m
+[31m-    <Reference Include="UnityEngine.Analytics">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="UnityEngine.Advertisements">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="UnityEngine.Analytics">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="UnityEngine.Networking">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>[m
+[31m-    </Reference>[m
+[31m-    <Reference Include="UnityEngine.UI">[m
+[31m-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>[m
+[31m-    </Reference>[m
+     <Reference Include="UnityEditor">[m
+       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>[m
+     </Reference>[m
