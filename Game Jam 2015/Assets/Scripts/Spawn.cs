@@ -39,7 +39,7 @@ public class Spawn : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
-		spawnDistance = 25 * this.transform.lossyScale.x;
+		spawnDistance = 25 + ( (this.transform.lossyScale.x - 1) * 5);
 		destroyDistance = spawnDistance * 2;
 		for(int i = 0; i < spheres.Length; i++) {
 			if(spheres[i] == null)

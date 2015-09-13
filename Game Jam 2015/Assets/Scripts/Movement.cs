@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour {
 				if(!boosted && planet.transform.localScale.x > 1)
 				{
 					this.transform.Translate(moveAmount * new Vector3(0,0,1) * .5f);
-					planet.transform.localScale = new Vector3(planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f, planet.transform.localScale.x *.95f);
+					planet.transform.localScale = new Vector3(planet.transform.localScale.x *.97f, planet.transform.localScale.x *.97f, planet.transform.localScale.x *.97f);
 					GetComponent<AudioSource>().PlayOneShot(boostSound);
 					boosted = true;
 				}
