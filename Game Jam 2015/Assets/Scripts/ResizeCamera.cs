@@ -24,7 +24,7 @@ public class ResizeCamera : MonoBehaviour {
 		{
 			if(this.transform.localScale.x >= 32)
 			{
-				this.GetComponent<Rigidbody>().velocity = this.GetComponent<Rigidbody>().velocity + (this.transform.forward * Time.deltaTime * 40);
+				this.GetComponent<Rigidbody>().velocity = this.GetComponent<Rigidbody>().velocity + (this.transform.forward * Time.deltaTime * 400);
 				this.GetComponent<MeshRenderer>().material.mainTexture = Resources.Load("White") as Texture;
 				if(Vector3.Distance(this.transform.position, mainCamera.transform.position) > 1000){
 					Destroy(this.gameObject);
